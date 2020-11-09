@@ -1,0 +1,41 @@
+$header-top: 0px;
+$header-left: 0px;
+// $header-width: 1366px;
+$header-width:  1088px; //innerのサイズ
+$header-height: 100px;
+$bg: #3F51B5 0% 0% no-repeat padding-box;
+$box-shadow: 0px 3px 3px;
+$opacity: 1;
+$font-white: #fff;
+$font-black: #333;
+
+//余白
+$padding-pc: 100px;
+$padding-tab: 24px;
+$padding-sp: 16px;
+
+// ヘッダー高さ
+$header-height-pc: 100px;
+$header-height-sp: 60px;
+
+$font: "Yu Gothic";
+
+// レイアウト幅
+$layout-width-inner: 1280px;
+
+// ブレークポイント
+$breakpoints: (
+  "sp": "screen and (max-width: 767px)",
+  "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "pc": "screen and (min-width: #{$layout-width-inner})",
+) !default;
+
+
+//メディアクエリ用のmixinを定義。デフォ値はsp
+@mixin mq($breakpoint: sp) {
+//map-get(マップ型変数, キー)で値を取得
+  @media #{map-get($breakpoints, $breakpoint)} {
+    //この中をカスタムできる
+    @content;
+  }
+}

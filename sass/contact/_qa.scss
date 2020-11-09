@@ -1,0 +1,113 @@
+
+.qa {
+    background: #EEEEEE 0% 0% no-repeat padding-box;
+
+    // .__content {
+    //     margin-top: 56px;
+    // }
+}
+
+.qa__content {
+    margin-top: 56px;
+
+    @include mq('sp') {
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+.qa__item {
+    top: 50px;
+    margin: 0 190px;
+    display: block;
+
+    @include mq('sp') {
+        margin: 0;
+    }
+}
+
+.accordion__head {
+    display: inline-block;
+    color: #FFFFFF;
+    background: #3F51B5 0% 0% no-repeat padding-box;
+    width: 900px;
+    height: 40px;
+    padding-left: 56px;
+    // text-align: center;
+    padding: 12px 0 12px 56px;
+    margin-top: 24px;
+
+    // text-align: left;
+    // vertical-align: middle;
+
+    &::before {
+        position: relative;
+        content: 'Q';
+        right: 25px;
+    // background-image: url(/img/plus.png);
+        @include mq('sp') {
+            right: 20px;
+        }
+    }
+    
+
+    @include mq('sp') {
+        width: 100%;
+        padding-left: 25px;
+    }
+}
+
+.accordion__body {
+    display: none;
+    width: 900px;
+    // border: 1px solid var(--unnamed-color-3f51b5);
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #3F51B5;
+    padding: 0 30px 16px 56px;
+    vertical-align: middle;
+    text-align: left;
+
+    &::before {
+        position: relative;
+        content: 'A';
+        top: 16px;
+        right: 25px;
+    }
+
+    @include mq('sp') {
+        width: 100%;
+    }
+}
+
+.accordion__body-in {
+}
+
+.accordion__icon {
+    display: inline-block;
+    position: relative;
+    // right: 50px;
+    left: 560px;
+    width: 12px;
+    height: 12px;
+    background-image: url(/img/plus.png);
+    
+    @include mq('sp') {
+        left: 35px;
+    }
+    // &::after {
+    //     position: absolute;
+    //     content: '';
+    //     background: transparent url(/img/plus.png) 0% 0% no-repeat padding-box;
+    // }
+
+    // &.is-open {
+    //     background-image: url(/img/minus.png);
+    // }
+}
+
+.accordion__icon.is-open {
+    background-image: url(/img/minus.png);
+    width: 12px;
+    height: 2px;
+    top: -5px;
+}

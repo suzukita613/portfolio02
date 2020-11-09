@@ -1,0 +1,98 @@
+
+.table {
+    background: #EFEFEF 0% 0% no-repeat padding-box;
+}
+
+.table__content {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    margin-top: 56px;
+    // width: 100%;
+    
+    @include mq('sp') {
+        margin-top: 30px;
+        display: block;
+    }
+}
+
+.table__image {
+    width: 454px;
+    margin-right: 40px;
+    // width: calc(100% / 2);
+    // margin-right: 24px;
+
+    @include mq('sp') {
+        width: 100%;
+    }
+}
+
+.table__price {
+    width: 704px;
+
+    @include mq('sp') {
+        width: 100%;
+        margin-top: 40px;
+    }
+}
+
+.price__item__table {
+    border: 1px solid #707070;
+    border-collapse: collapse; //隣接するセルのborderを重ねる(collapse)か間を開けるか(separate)
+    table-layout: fixed;
+    width: 100%;
+    // height: 71px;
+
+    th, td {
+        border: 1px solid #707070;
+        vertical-align: middle;
+        // text-align: right;
+        height: 58px;
+        font-weight: bold;
+
+        @include mq('sp') {
+            height: 36px;
+        }
+
+    }
+
+    td:first-child {
+        background: #979797;
+        color: #fff;
+        text-align: center;
+    }
+
+    td:not(:first-child) {
+        text-align: right;
+        background: #fff;
+        padding-right: 25px;
+    }
+}
+
+.price__item__background {
+    background: #979797;
+    color: #fff;
+
+    th:first-child {
+        width: 170px;
+
+        @include mq('sp') {
+            width: 60px;
+        }
+    }
+}
+
+.font-red {
+    color: red;
+    font-weight: bold;
+}
+
+.info__message {
+    padding-top: 10px;
+}
+
+.font-bold {
+    font-weight: bold;
+    border-bottom: 1px solid #333;
+}
+
